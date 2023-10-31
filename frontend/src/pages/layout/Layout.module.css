@@ -19,6 +19,8 @@
     align-items: center;
     margin-left: 14px;
     text-decoration: none;
+    gap: 10px;
+    padding: 10px 0;
 }
 
 .headerTitle {

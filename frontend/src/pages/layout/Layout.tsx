@@ -7,13 +7,14 @@ import { useContext, useEffect, useState } from "react";
 import { HistoryButton, ShareButton } from "../../components/common/Button";
 import { AppStateContext } from "../../state/AppProvider";
 import { CosmosDBStatus } from "../../api";
+import {sqnLogo} from "../../assets/sqnLogo";
 
 const shareButtonStyles: ICommandBarStyles & IButtonStyles = {
     root: {
       width: 86,
       height: 32,
       borderRadius: 4,
-      background: 'radial-gradient(109.81% 107.82% at 100.1% 90.19%, #0F6CBD 33.63%, #2D87C3 70.31%, #8DDDD8 100%)',
+      background: 'rgb(32, 42, 68)',
     //   position: 'absolute',
     //   right: 20,
       padding: '5px 12px',
@@ -23,7 +24,7 @@ const shareButtonStyles: ICommandBarStyles & IButtonStyles = {
       color: '#FFFFFF',
     },
     rootHovered: {
-      background: 'linear-gradient(135deg, #0F6CBD 0%, #2D87C3 51.04%, #8DDDD8 100%)',
+      background: 'rgb(32, 42, 68)',
     },
     label: {
       fontWeight: 600,
@@ -73,13 +74,14 @@ const Layout = () => {
                 // className={styles.headerContainer}
                 >
                     <Stack horizontal verticalAlign="center">
-                        <img
-                            src={Azure}
-                            className={styles.headerIcon}
-                            aria-hidden="true"
-                        />
+                        { /* <img */ }
+                        { /*    src={Azure} */ }
+                        { /*    className={styles.headerIcon} */ }
+                        { /*    aria-hidden="true" */ }
+                        { /* /> */ }
                         <Link to="/" className={styles.headerTitleContainer}>
-                            <h1 className={styles.headerTitle}>Azure AI</h1>
+                            <sqnLogo/>
+                            <h1 className={styles.headerTitle}></h1>
                         </Link>
                     </Stack>
                     <Stack horizontal tokens={{ childrenGap: 4 }}>
